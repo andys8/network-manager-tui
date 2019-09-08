@@ -16,10 +16,10 @@ theme = newTheme
     (white `on` black)
     [ (List.listAttr               , fg white)
     , (List.listSelectedAttr       , fg brightWhite)
-    , (List.listSelectedFocusedAttr, black `on` green)
+    , (List.listSelectedFocusedAttr, black `on` red)
     , (attrName "key"              , withStyle (fg green) bold)
     , (attrName "bold"             , withStyle (fg white) bold)
     , (attrName "current"          , fg brightWhite)
-    , (attrName "title"            , withStyle (fg green) bold)
+    , (attrName "title"            , withStyle (fg brightRed) bold)
     ]
 

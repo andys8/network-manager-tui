@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
-module Main where
 
+module Main where
 
 
 import qualified Graphics.Vty                  as V
@@ -43,8 +43,7 @@ main = do
 
 toggle :: State -> IO String
 toggle state =
-  Data.Maybe.fromMaybe (pure "Something went wrong")
-    $ (toggleConnection . snd <$> L.listSelectedElement state)
+  fromMaybe (pure "") (toggleConnection . snd <$> L.listSelectedElement state)
 
 
 app :: M.App State e ()
@@ -109,8 +108,4 @@ appHandleEvent state _ = M.continue state
 
 initialState :: [Connection] -> State
 initialState connections = L.list () (Vec.fromList connections) 1
-
-
-selectedConnection :: State -> Maybe Connection
-selectedConnection state = snd <$> L.listSelectedElement state
 
