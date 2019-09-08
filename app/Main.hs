@@ -58,7 +58,7 @@ app = M.App { M.appDraw         = appDraw
 appDraw :: State -> [Widget ()]
 appDraw state =
   [ C.vCenter $ padAll 1 $ vBox
-      [hBox [C.hCenter $ drawBranchList state], str " ", instructions]
+      [hBox [C.hCenter $ drawConnectionList state], str " ", instructions]
   ]
  where
   instructions = C.hCenter $ hLimit 100 $ hBox
@@ -68,8 +68,8 @@ appDraw state =
     ]
 
 
-drawBranchList :: L.List () Connection -> Widget ()
-drawBranchList list =
+drawConnectionList :: L.List () Connection -> Widget ()
+drawConnectionList list =
   withBorderStyle BS.unicodeBold
     $ B.borderWithLabel title
     $ hLimit 80
@@ -94,13 +94,13 @@ drawInstruction keys action =
 
 appHandleEvent :: State -> T.BrickEvent () e -> T.EventM () (T.Next State)
 appHandleEvent state (T.VtyEvent e) =
-  let checkoutBranch  = M.halt state
+  let selectConnection  = M.halt state
       deleteSelection = L.listClear state
       quit            = M.halt deleteSelection
   in  case e of
         V.EvKey V.KEsc        [] -> quit
         V.EvKey (V.KChar 'q') [] -> quit
-        V.EvKey V.KEnter      [] -> checkoutBranch
+        V.EvKey V.KEnter      [] -> selectConnection
         ev -> M.continue =<< L.handleListEventVi L.handleListEvent ev state
 
 appHandleEvent state _ = M.continue state
