@@ -42,8 +42,8 @@ executables:
   nmt:
     main: Main.hs
     source-dirs: app
-    # generated-other-modules:
-    #   - Paths_Main
+    generated-other-modules:
+      - Paths_network_manager_tui
     when:
       - condition: flag(static)
         then:

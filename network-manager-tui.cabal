@@ -4,7 +4,7 @@ cabal-version: 2.0
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5936c8bfdd663d6a09209c63191166160eb7ad4672de4a183f05d4de077023b3
+-- hash: b89d315c3145148a5e2aa3e71deafb7c0a383e745ab324f4132ce97dedcdc262
 
 name:           network-manager-tui
 version:        0.1.0.0
@@ -52,6 +52,8 @@ library network-manager-tui-lib
 executable nmt
   main-is: Main.hs
   other-modules:
+      Paths_network_manager_tui
+  autogen-modules:
       Paths_network_manager_tui
   hs-source-dirs:
       app
