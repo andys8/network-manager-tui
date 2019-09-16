@@ -4,6 +4,12 @@ A simple network manager command-line tool
 
 ![screenshot](https://raw.githubusercontent.com/andys8/network-manager-tui/master/screenshot.png)
 
+## Usage
+
+```sh
+nmt
+```
+
 ## Dependencies
 
 `nmcli` has to be installed
@@ -18,8 +24,15 @@ cd network-manager-tui
 stack install
 ```
 
-## Usage
+### Stack
 
 ```sh
-nmt
+stack install network-manager-tui # --resolver=lts-14
 ```
+
+#### Nix
+
+```sh
+nix-env -f "<nixpkgs>" -iA haskellPackages.network-manager-tui
+```
+
