@@ -4,10 +4,10 @@ cabal-version: 2.0
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b89d315c3145148a5e2aa3e71deafb7c0a383e745ab324f4132ce97dedcdc262
+-- hash: 4d0b106c9382ece01037a64421ec68d5b80f23f6f3a6350fa2a276c1d448567d
 
 name:           network-manager-tui
-version:        0.1.0.0
+version:        1.0.0.0
 synopsis:       network-manager tui
 description:    Please see the README on GitHub at <https://github.com/andys8/network-manager-tui#readme>
 category:       Tui
