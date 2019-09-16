@@ -1,5 +1,9 @@
 # network-manager-tui
 
+## Dependencies
+
+`nmcli` has to be installed
+
 ## Install
 
 ```sh
