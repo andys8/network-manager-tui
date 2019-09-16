@@ -1,10 +1,16 @@
 # network-manager-tui
 
+A simple network manager command-line tool
+
+![screenshot](https://raw.githubusercontent.com/andys8/network-manager-tui/master/screenshot.png)
+
 ## Dependencies
 
 `nmcli` has to be installed
 
-## Install
+## Installation
+
+### Clone repository
 
 ```sh
 git clone https://github.com/andys8/network-manager-tui.git
