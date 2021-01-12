@@ -12,7 +12,7 @@ nmt
 
 ## Dependencies
 
-`nmcli` has to be installed
+[`nmcli`](https://developer.gnome.org/NetworkManager/stable/nmcli.html) (command-line tool for controlling NetworkManager) has to be installed
 
 ## Installation
 
