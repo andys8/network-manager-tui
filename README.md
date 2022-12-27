@@ -1,4 +1,4 @@
-# network-manager-tui
+# network-manager-tui (deprecated and not maintained anymore)
 
 A simple network manager command-line tool
 
